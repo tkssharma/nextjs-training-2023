@@ -1,8 +1,35 @@
+# @tkssharma/next-apps
+
+## Prerequisites
+
+This repository manages their dependencies with `pnpm` in the case you don't have it installed in your system please refer to their documentation to install it.
+
+## Getting Started
+
+Install dependencies
+
+```
+pnpm i
+```
+
+Build all packages
+
+```
+npm run build
+```
+
+Run all unit tests across all packages
+
+```
+npm test
+```
+
 # Mastering Next.js
 
-Hey, everyone! 👋 [I'm Lee](https://leerob.io/), the creator of Mastering Next.js. This course was originally released in 2019. Next.js has evolved quite a bit since v9 and some of this course is officially "outdated".
+Hey, everyone! 👋  This course is talking about latest next js training.
+I will keep updating this course with latest features
+This course is with pnpm workspace which has many next js applications.
 
-I've updated the course overview below to annotate which parts are up to date, which have changed, and what my new suggestions are. In my opinion, this is the ideal way to _evolve_ this course. The videos will serve as a reference to a point in time, but newer additions to the framework make certain aspects _much_ easier.
 
 - 🟢 **Up to date**
 - 🟡 **Outdated**
