@@ -1,0 +1,32 @@
+body {
+  --sunny: #e99042;
+}
+
+nav ol {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin-block: 32px;
+}
+
+nav li a {
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+time {
+  white-space: nowrap;
+}
+
+li a:hover {
+  text-decoration: none;
+}
+
+main {
+  padding-bottom: 1.5rem;
+}

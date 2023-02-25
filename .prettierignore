@@ -1,0 +1,10 @@
+packages/**/build
+packages/**/coverage
+packages/**/node_modules
+packages/**/pnpm-lock.yaml
+packages/**/package-lock.json
+pnpm-workspace.yaml
+pnpm-lock.yaml
+package-lock.json
+.vscode
+.husky

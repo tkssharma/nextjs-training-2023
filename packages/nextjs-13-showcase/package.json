@@ -1,0 +1,18 @@
+{
+  "name": "lil-dashboard",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "npm run dev"
+  },
+  "author": "Lachlan Campbell",
+  "license": "MIT",
+  "dependencies": {
+    "charts.css": "^0.9.0",
+    "next": "^13.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "water.css": "^2.1.1"
+  }
+}
