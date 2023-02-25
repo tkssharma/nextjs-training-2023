@@ -1,8 +1,8 @@
 import { PrismaClient } from "@prisma/client";
-import { wait } from "../../../utils/wait";
+import { wait } from "../../../wait";
 import { IssueDetail } from "./issue-detail.component";
 
-async function IssueDetailPage({ params: { issue_id } }) {
+async function IssueDetailPage({ params: { issue_id } }: any) {
   const prisma = new PrismaClient();
   const issue = await prisma.issue.findFirst({
     where: {
