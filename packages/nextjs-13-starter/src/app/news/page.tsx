@@ -9,9 +9,9 @@ export default async function Page() {
     <main>
       <h1>News</h1>
       <ul style={{ textAlign: 'left', listStyle: 'none', padding: 0 }}>
-        {articles.map((article) => (
+        {articles.map((article: any) => (
           <li key={article.url} style={{ marginBottom: '1rem' }}>
-            <a href={article.url} target="_blank">
+            <a href={article.url} >
               <strong>{article.title}</strong>
               {article.date && (
                 <small style={{ marginLeft: 8 }}>

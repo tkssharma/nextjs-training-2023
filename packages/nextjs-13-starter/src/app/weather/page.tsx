@@ -7,7 +7,7 @@ export default async function Page() {
       next: { revalidate: 15 },
     }
   ).then((res) => res.json());
-  const temperatures = forecast.map((row) => row.temperature);
+  const temperatures = forecast.map((row: any) => row.temperature);
   const minTemp = Math.min(...temperatures);
   const maxTemp = Math.max(...temperatures);
 
@@ -23,7 +23,7 @@ export default async function Page() {
       >
         <caption>Temperature This Week</caption>
         <tbody>
-          {forecast.map((row, i) => (
+          {forecast.map((row: any, i: number) => (
             <tr key={row.name}>
               <th scope="row">
                 {i === 0
@@ -32,21 +32,7 @@ export default async function Page() {
                   ? ''
                   : row.name.slice(0, 3)}
               </th>
-              <td
-                style={{
-                  '--start':
-                    i === 0
-                      ? (row.temperature - minTemp) / (maxTemp - minTemp)
-                      : (forecast[i - 1].temperature - minTemp) /
-                        (maxTemp - minTemp),
-                  '--size': (row.temperature - minTemp) / (maxTemp - minTemp),
-                  '--color': row.description.includes('Rain')
-                    ? 'var(--links)'
-                    : row.description.includes('Cloudy')
-                    ? 'var(--text-muted)'
-                    : 'var(--sunny)',
-                }}
-              >
+              <td>
                 <span className="data">{row.temperature}º</span>
               </td>
             </tr>
@@ -61,10 +47,10 @@ export default async function Page() {
 
       <table>
         <tbody>
-          {forecast.map((row) => (
+          {forecast.map((row: any) => (
             <tr key={row.name}>
               <th scope="row">{row.name}</th>
-              <td colspan={2}>{row.description}</td>
+              <td colSpan={2}>{row.description}</td>
               <td style={{ textAlign: 'right' }}>
                 {row.temperature}º{row.unit}
               </td>

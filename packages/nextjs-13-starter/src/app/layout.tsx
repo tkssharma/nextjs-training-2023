@@ -2,7 +2,7 @@ import 'water.css/out/water.min.css';
 import './style.css';
 import Link from 'next/link';
 
-function App({ children }) {
+function App({ children }:any) {
   return (
     <html lang="en-US">
       <head>

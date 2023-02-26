@@ -1,6 +1,7 @@
 packages/**/build
 packages/**/coverage
 packages/**/node_modules
+packages/**/.next
 packages/**/pnpm-lock.yaml
 packages/**/package-lock.json
 pnpm-workspace.yaml

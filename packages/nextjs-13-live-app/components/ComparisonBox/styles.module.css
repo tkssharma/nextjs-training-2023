@@ -1,0 +1,24 @@
+.ComparisonContainer {
+  position: relative;
+  display: flex;
+  min-width: 100%;
+  justify-content: space-between;
+}
+
+.ComparisonContainer > span {
+  position: absolute;
+  font-size: 1.125rem;
+  margin-bottom: 3rem;
+  width: 100%;
+  top: 5px;
+  text-align: center;
+  font-style: italic;
+}
+
+@media screen and (min-width: 700px) {
+  .ComparisonContainer > span {
+    font-size: 2.5rem;
+    margin: unset;
+    top: 10rem;
+  }
+}

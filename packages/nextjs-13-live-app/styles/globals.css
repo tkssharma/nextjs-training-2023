@@ -1,0 +1,37 @@
+:root {
+  color-scheme: dark;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #262c31;
+  color: #e6e6e6;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+
+  min-height: 100vh;
+  /* border: 1px solid red; */
+
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+@media screen and (min-width: 375px) {
+  .container {
+    max-width: 375px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .container {
+    max-width: 700px;
+    padding-block: 1.5rem;
+  }
+}

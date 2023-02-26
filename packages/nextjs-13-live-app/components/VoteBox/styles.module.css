@@ -1,0 +1,66 @@
+.VoteContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  height: 100%;
+}
+.VoteContainer:not(:first-child) {
+  margin-left: 1rem;
+}
+
+.VoteContainer > p {
+  font-size: 1.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 125px;
+  text-transform: capitalize;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.ImageContainer {
+  border: 2px solid white;
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+}
+
+.ImageContainer > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+.MyButton {
+  font-size: 1.25rem;
+  padding: 0.75rem;
+  background-color: transparent;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  border: 2px solid white;
+  cursor: pointer;
+}
+
+.MyButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media screen and (min-width: 700px) {
+  .VoteContainer {
+    width: 256px;
+  }
+
+  .VoteContainer > p {
+    font-size: 2rem;
+    width: 250px;
+  }
+
+  .MyButton {
+    font-size: 1.75rem;
+  }
+}
