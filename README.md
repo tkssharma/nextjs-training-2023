@@ -29,8 +29,3 @@ npm test
 Hey, everyone! 👋  This course is talking about latest next js training.
 I will keep updating this course with latest features
 This course is with pnpm workspace which has many next js applications.
-
-
-- 🟢 next js app based directory
-- 🟢 next js server side components 
-- 🟢 next js async components 

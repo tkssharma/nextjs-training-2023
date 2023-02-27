@@ -8,6 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "generate": "prisma generate",
+    "migrate": "prisma migrate dev",
+    "postinstall": "prisma generate",
     "format": "prettier --write ."
   },
   "dependencies": {
