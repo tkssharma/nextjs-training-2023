@@ -1,5 +1,5 @@
 import { db } from './db';
-
+import axios from 'axios';
 /**
  * Generations Count
  * I    - 151
@@ -17,11 +17,11 @@ import { db } from './db';
 const POKEMON_COUNT = 37;
 
 async function Seed() {
-  const res = await fetch(
+  const res = await axios.get(
     'https://raw.githubusercontent.com/PokeAPI/pokeapi/master/data/v2/csv/pokemon.csv'
   );
 
-  const text = (await res.text()).split('\n');
+  const text = res.data.split('\n');
 
   // slice the first row to avoid header text
   const formattedPokemon = text.slice(1, POKEMON_COUNT + 1).map((data) => {

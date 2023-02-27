@@ -12,7 +12,7 @@ services:
     environment:
       - POSTGRES_USER=api
       - POSTGRES_PASSWORD=development_pass
-      - POSTGRES_MULTIPLE_DATABASES="demo-api","demo-api-testing"
+      - POSTGRES_MULTIPLE_DATABASES="pokemon-app","pokemon-app-testing"
     volumes:
       - ./docker-utils:/docker-entrypoint-initdb.d
       - contract_api_data:/data/postgres

@@ -6,7 +6,7 @@ import { useTransition, useState } from "react";
 
 interface VoteContextType {
   handleVote: (pokemonId: number) => void;
-  isMutating: boolean;
+  isLoading: boolean;
 }
 
 export const VoteContext = createContext({} as VoteContextType);
@@ -21,7 +21,7 @@ export default function VoteContextProvider({
   const [isFetching, setIsFetching] = useState(false);
 
   // Create inline loading UI
-  const isMutating = isFetching || isPending;
+  const isLoading = isFetching || isPending;
 
   async function handleVote(pokemonId: number) {
     setIsFetching(true);
@@ -29,16 +29,17 @@ export default function VoteContextProvider({
       method: "POST",
     });
     setIsFetching(false);
-
-    startTransition(() => {
-      // Refresh the current route and fetch new data from the server without
-      // losing client-side browser or React state.
-      route.refresh();
-    });
+    route.refresh();
   }
 
+
+
+
+
+
+
   return (
-    <VoteContext.Provider value={{ handleVote, isMutating }}>
+    <VoteContext.Provider value={{ handleVote, isLoading }}>
       {children}
     </VoteContext.Provider>
   );
