@@ -1,10 +1,9 @@
-import { API_KEY } from "@/app/layout";
-import { imagePathPrefix } from "@/constants";
+import { imagePathPrefix } from "../../../constants";
 import Image from "next/image";
 import Link from "next/link";
 
 export default async function page({ params: { movieId } }) {
-  const res = await fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${API_KEY}`);
+  const res = await fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${process.env.MOVIE_DB_API_KEY}`);
   const data = await res.json();
   return (
     <div>

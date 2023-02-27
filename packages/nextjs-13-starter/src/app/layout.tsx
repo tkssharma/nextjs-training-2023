@@ -1,5 +1,3 @@
-import 'water.css/out/water.min.css';
-import './style.css';
 import Link from 'next/link';
 
 function App({ children }:any) {

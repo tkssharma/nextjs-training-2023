@@ -1,16 +1,15 @@
 "use client";
-import { AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import Movie from "../Movie";
 import { genres } from "./constants";
 
-export default function MovieList({ data }) {
+export default function MovieList({ data }: any) {
   const [filteredData, setFilteredData] = useState([...data]);
-  const [actived, setActived] = useState(0);
+  const [active, setActive] = useState(0);
 
   useEffect(() => {
-    setFilteredData(() => [...data].filter((i) => (actived ? i.genre_ids.includes(actived) : i)));
-  }, [actived]);
+    setFilteredData(() => [...data].filter((i) => (active ? i.genre_ids.includes(active) : i)));
+  }, [active]);
 
   return (
     <div>
@@ -22,21 +21,21 @@ export default function MovieList({ data }) {
               key={i.id}
               className={index === 0 ? "-ml-1" : "ml-3"}
               onClick={() => {
-                setActived(i.id);
+                setActive(i.id);
               }}
             >
-              <GenreButton isActive={i.id === actived}>{i.title}</GenreButton>
+              <GenreButton isActive={i.id === active}>{i.title}</GenreButton>
             </li>
           );
         })}
       </ul>
       <div className="grid grid-cols-fluid gap-16 my-8">
         {filteredData.length ? (
-          <AnimatePresence>
+          <div>
             {filteredData.map((movie) => (
               <Movie key={movie.id} movie={movie} />
             ))}
-          </AnimatePresence>
+          </div>
         ) : (
           "No movies found"
         )}
@@ -45,10 +44,10 @@ export default function MovieList({ data }) {
   );
 }
 
-const GenreButton = ({ children, isActive, ...props }) => (
+const GenreButton = ({ children, isActive, ...props }: any) => (
   <button
     {...props}
-    className={`${isActive ? "bg-blue-500 text-white" : "bg-transparent text-black"}  hover:bg-blue-500 font-bold py-2 px-4 rounded-full`}
+    className={`${isActive ? "bg-blue-500 text-white" : "bg-transparent "}  hover:bg-blue-500 font-bold py-2 px-4 rounded-full`}
   >
     {children}
   </button>
